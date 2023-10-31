@@ -40,6 +40,9 @@ android {
 }
 
 dependencies {
+    // YandexMap
+    implementation("com.yandex.android:maps.mobile:4.3.1-full")
+
     // Navigation
     implementation("androidx.navigation:navigation-common-ktx:2.7.4")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")

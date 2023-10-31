@@ -19,7 +19,7 @@ class SignInViewModel(private val context: Application) : AndroidViewModel(conte
     var networkLiveData: MutableLiveData<Boolean> = MutableLiveData()
 
     private val handler = CoroutineExceptionHandler { _, throwable ->
-        Log.e("Maksim", "${throwable.message}")
+        Log.e("SignInViewModel", "${throwable.message}")
         errorLiveData.value = throwable.message
     }
 

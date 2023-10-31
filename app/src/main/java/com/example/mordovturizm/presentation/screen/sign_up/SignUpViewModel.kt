@@ -18,15 +18,15 @@ class SignUpViewModel(private val context: Application) : AndroidViewModel(conte
     var errorLiveData: MutableLiveData<String> = MutableLiveData()
     var networkLiveData: MutableLiveData<Boolean> = MutableLiveData()
 
-    val handler = CoroutineExceptionHandler { _, throwable ->
-        Log.e("Maksim", "${throwable.message}")
+    private val handler = CoroutineExceptionHandler { _, throwable ->
+        Log.e("SignUpViewModel", "${throwable.message}")
         errorLiveData.value = throwable.message
     }
 
-    fun signUp(email: String, password: String, number: Int, fullName: String) {
+    fun signUp(email: String, password: String, fullName: String) {
         if (isOnline()) {
             viewModelScope.launch(handler) {
-                signUpUseCase.execute(email, password, number, fullName)
+                signUpUseCase.execute(email, password, fullName)
                 signUpLiveData.value = true
             }
         } else {

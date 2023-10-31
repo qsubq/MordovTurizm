@@ -6,7 +6,7 @@ import com.example.mordovturizm.domain.repository.RemoteRepository
 class SignUpUseCase {
     private val repository: RemoteRepository = RemoteRepositoryImpl()
 
-    suspend fun execute(email: String, password: String, number: Int, fullName: String) {
-        repository.signUp(email, password, number, fullName)
+    suspend fun execute(email: String, password: String, fullName: String) {
+        repository.signUp(email, password, fullName)
     }
 }
