@@ -4,9 +4,8 @@ import com.example.mordovturizm.data.remote_data_source.repository.RemoteReposit
 import com.example.mordovturizm.domain.repository.RemoteRepository
 
 class SignInUseCase {
-    private val repository: RemoteRepository = RemoteRepositoryImpl()
-
+    private val remoteRepository: RemoteRepository = RemoteRepositoryImpl()
     suspend fun execute(email: String, password: String) {
-        repository.signIn(email, password)
+        remoteRepository.signIn(email, password)
     }
 }

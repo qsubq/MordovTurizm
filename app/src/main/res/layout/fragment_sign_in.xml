@@ -146,7 +146,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text=" Зарегистрироваться"
-        android:textColor="@color/main_orange"
+        android:textColor="@color/main_red"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/materialTextView7"
         app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />

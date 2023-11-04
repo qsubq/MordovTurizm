@@ -120,7 +120,7 @@ class SignInFragment : Fragment() {
 
     private fun submitEmail(): String? {
         return if (!Patterns.EMAIL_ADDRESS.matcher(binding.TIETEmail.text.toString()).matches()) {
-            "Invalid email"
+            "Неправильно указан email"
         } else {
             null
         }

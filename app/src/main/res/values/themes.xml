@@ -3,8 +3,17 @@
     <style name="Base.Theme.MordovTurizm" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">@color/main_orange</item>
+        <item name="colorPrimary">@color/main_red</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomDialogTheme</item>
     </style>
 
     <style name="Theme.MordovTurizm" parent="Base.Theme.MordovTurizm" />
+
+    <style name="AppBottomDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModelStyle</item>
+    </style>
+    
+    <style name="AppModelStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_shape</item>
+    </style>
 </resources>
