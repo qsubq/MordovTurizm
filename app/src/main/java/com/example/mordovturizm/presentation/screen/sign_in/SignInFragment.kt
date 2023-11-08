@@ -29,6 +29,8 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.isSignedIn()
+
         binding.tvToSignUp.setOnClickListener {
             findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
         }
@@ -100,7 +102,7 @@ class SignInFragment : Fragment() {
             binding.progressBar.visibility = View.GONE
 
             val bundle = Bundle()
-            bundle.putString("email", binding.TIETEmail.text.toString())
+            bundle.putString("email", it)
             findNavController().navigate(R.id.action_signInFragment_to_mapFragment, bundle)
         }
     }

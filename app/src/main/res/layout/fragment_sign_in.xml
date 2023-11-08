@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".presentation.screen.sign_in.SignInFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -74,7 +74,8 @@
             android:id="@+id/TIETEmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
@@ -110,7 +111,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="2dp"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -121,6 +123,7 @@
         android:layout_marginTop="79dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Войти"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +134,7 @@
         android:id="@+id/materialTextView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="4dp"
         android:text="Ещё нет аккаунта ?"
         android:textAlignment="center"

@@ -12,4 +12,8 @@ class LocalRepositoryImpl(context: Context) : LocalRepository {
     override fun getUserEmail(): String {
         return sharedPref.getString("Email", "") ?: ""
     }
+
+    override fun logOutUser() {
+        sharedPref.edit().putString("Email", "").apply()
+    }
 }

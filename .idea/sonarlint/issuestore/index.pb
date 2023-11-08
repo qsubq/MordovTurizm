@@ -39,5 +39,15 @@ Oapp/src/main/java/com/example/mordovturizm/domain/repository/LocalRepository.kt
 Qapp/src/main/java/com/example/mordovturizm/presentation/screen/map/MapsObjects.kt,a\e\ae3ea4d43002b8a81affa59dd6cfd463e38bdb67
 à
 Xapp/src/main/java/com/example/mordovturizm/presentation/screen/map/RoutesSelectDialog.kt,a\1\a1c7e57b50fe45d9d3efaeeae2c82bcecc007eaa
-}
-Mapp/src/main/java/com/example/mordovturizm/presentation/screen/map//Routes.kt,0\9\097be64d8d3b9052db04217432dab7a119c71611
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+u
+Eapp/src/main/java/com/example/mordovturizm/domain/model/PointModel.kt,c\f\cf6007b386bf4b4d8f413010cbfce840aa2955ae
+ã
+[app/src/main/java/com/example/mordovturizm/presentation/screen/settings/SettingsFragment.kt,a\7\a767356eb9b6cb5838205998b1b03f4c25441d27
+Å
+Qapp/src/main/java/com/example/mordovturizm/domain/use_case/IsUserSignInUseCase.kt,d\7\d7886fed86e85e374e66f800cfa8bfb3cb4a47cc
+
+Oapp/src/main/java/com/example/mordovturizm/domain/use_case/LogoutUserUseCase.kt,b\d\bd314795e991f21c3f8d40f12ec8fbaea01d987d

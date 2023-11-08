@@ -6,11 +6,11 @@ import com.example.mordovturizm.data.remote_data_source.repository.RemoteReposit
 import com.example.mordovturizm.domain.repository.LocalRepository
 import com.example.mordovturizm.domain.repository.RemoteRepository
 
-class SignInUseCase(context: Context) {
+class LogoutUserUseCase(context: Context) {
     private val remoteRepository: RemoteRepository = RemoteRepositoryImpl()
     private val localRepository: LocalRepository = LocalRepositoryImpl(context)
-    suspend fun execute(email: String, password: String) {
-        remoteRepository.signIn(email, password)
-        localRepository.saveUserEmail(email)
+    suspend fun execute() {
+        remoteRepository.logOutUser()
+        localRepository.logOutUser()
     }
 }

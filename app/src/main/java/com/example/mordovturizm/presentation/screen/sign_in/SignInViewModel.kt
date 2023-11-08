@@ -7,14 +7,16 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.mordovturizm.domain.use_case.IsUserSignInUseCase
 import com.example.mordovturizm.domain.use_case.SignInUseCase
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 
 class SignInViewModel(private val context: Application) : AndroidViewModel(context) {
-    private val signInUseCase = SignInUseCase()
+    private val signInUseCase = SignInUseCase(context)
+    private val isSignedInUseCase = IsUserSignInUseCase(context)
 
-    var signInLiveData: MutableLiveData<Boolean> = MutableLiveData()
+    var signInLiveData: MutableLiveData<String> = MutableLiveData()
     var errorLiveData: MutableLiveData<String> = MutableLiveData()
     var networkLiveData: MutableLiveData<Boolean> = MutableLiveData()
 
@@ -27,10 +29,18 @@ class SignInViewModel(private val context: Application) : AndroidViewModel(conte
         if (isOnline()) {
             viewModelScope.launch(handler) {
                 signInUseCase.execute(email, password)
-                signInLiveData.value = true
+                signInLiveData.value = email
             }
         } else {
             networkLiveData.value = false
+        }
+    }
+
+    fun isSignedIn() {
+        isSignedInUseCase.execute().let {
+            if (it.isNotEmpty()) {
+                signInLiveData.value = it
+            }
         }
     }
 

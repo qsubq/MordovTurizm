@@ -42,6 +42,10 @@ class RemoteRepositoryImpl : RemoteRepository {
         createNewUser(email, password, fullName)
     }
 
+    override suspend fun logOutUser() {
+        client.gotrue.logout()
+    }
+
     private suspend fun createNewUser(
         email: String,
         password: String,

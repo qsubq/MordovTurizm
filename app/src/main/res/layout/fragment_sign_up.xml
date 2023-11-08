@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".presentation.screen.sign_up.SignUpFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -34,10 +35,10 @@
         android:id="@+id/materialTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="300dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto_medium"
+        android:maxWidth="300dp"
         android:text="Чтобы продолжить завершите процедуру\nрегистрации"
         android:textColor="#A7A7A7"
         android:textSize="14sp"
@@ -65,8 +66,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="4dp"
-        app:helperTextTextColor="@android:color/holo_red_dark"
         app:boxStrokeColor="#A7A7A7"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView3">
@@ -74,6 +75,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TIETName"
             android:layout_width="match_parent"
+            android:textColor="@color/black"
             android:layout_height="match_parent"
             android:layout_marginBottom="2dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -99,6 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="4dp"
+        android:textColor="@color/black"
         app:boxStrokeColor="#A7A7A7"
         app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +111,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TIETEmail"
             android:layout_width="match_parent"
+            android:textColor="@color/black"
             android:layout_height="match_parent"
             android:layout_marginBottom="2dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -134,8 +138,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="4dp"
-        app:helperTextTextColor="@android:color/holo_red_dark"
         app:boxStrokeColor="#A7A7A7"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView6"
@@ -146,17 +150,20 @@
             android:id="@+id/TIETPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/black"
             android:layout_marginBottom="2dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
+        android:backgroundTint="@color/main_red"
         android:layout_height="58dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="70dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Создать аккаунт"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"

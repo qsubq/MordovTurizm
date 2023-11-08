@@ -17,6 +17,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.mordovturizm.R
 import com.example.mordovturizm.databinding.BottomSheetDialogLayoutBinding
 import com.example.mordovturizm.databinding.FragmentMapBinding
@@ -48,6 +50,7 @@ val startLocation = Point(54.187435, 45.183934)
 
 class MapFragment : Fragment() {
     private lateinit var binding: FragmentMapBinding
+    private val viewModel by viewModels<MapViewModel>()
 
     private val email by lazy {
         arguments?.getString("email")
@@ -111,6 +114,10 @@ class MapFragment : Fragment() {
         listOfPoints.forEach { point ->
             createMapObject(point, mapObjectCollection, marker)
         }
+
+        viewModel.logOutLiveData.observe(viewLifecycleOwner) {
+            this.findNavController().navigate(R.id.action_mapFragment_to_signInFragment)
+        }
     }
 
     override fun onCreateContextMenu(
@@ -121,6 +128,7 @@ class MapFragment : Fragment() {
         super.onCreateContextMenu(menu, v, menuInfo)
         menu.add(Menu.NONE, 101, Menu.NONE, "Выбрать маршрут")
         menu.add(Menu.NONE, 102, Menu.NONE, "Очистить маршрут")
+        menu.add(Menu.NONE, 103, Menu.NONE, "Выйти из аккаунта")
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
@@ -132,9 +140,13 @@ class MapFragment : Fragment() {
                 ).show(requireActivity().supportFragmentManager, "RoutesSelectDialog")
             }
 
-            else -> {
+            102 -> {
                 routesCollection.clear()
                 lastRoute = usersLocation
+            }
+
+            else -> {
+                viewModel.logOut()
             }
         }
         return true
