@@ -13,8 +13,8 @@ import io.github.jan.supabase.realtime.Realtime
 
 class RemoteRepositoryImpl : RemoteRepository {
     private val client = createSupabaseClient(
-        supabaseUrl = "https://sjwqypmvzzrtenugzbdg.supabase.co",
-        supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNqd3F5cG12enpydGVudWd6YmRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg2NTIxODcsImV4cCI6MjAxNDIyODE4N30.hJZdlKYwUANLibX2Uyf9dN11QRmC2hC1PHrQ5GzqREM",
+        supabaseUrl = "https://ciruthjxlrnikgduqarl.supabase.co",
+        supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNpcnV0aGp4bHJuaWtnZHVxYXJsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDExOTQ4OTAsImV4cCI6MjAxNjc3MDg5MH0.4LqN1c3yWUypk1Lusf86gwaB_f3FoqMP_d38epc5b08",
     ) {
         install(GoTrue)
         install(Postgrest)

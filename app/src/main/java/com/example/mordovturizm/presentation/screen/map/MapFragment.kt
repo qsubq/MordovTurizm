@@ -126,9 +126,11 @@ class MapFragment : Fragment() {
         menuInfo: ContextMenu.ContextMenuInfo?,
     ) {
         super.onCreateContextMenu(menu, v, menuInfo)
-        menu.add(Menu.NONE, 101, Menu.NONE, "Выбрать маршрут")
-        menu.add(Menu.NONE, 102, Menu.NONE, "Очистить маршрут")
-        menu.add(Menu.NONE, 103, Menu.NONE, "Выйти из аккаунта")
+        with(menu) {
+            add(Menu.NONE, 101, Menu.NONE, "Выбрать маршрут")
+            add(Menu.NONE, 102, Menu.NONE, "Очистить маршрут")
+            add(Menu.NONE, 103, Menu.NONE, "Выйти из аккаунта")
+        }
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
@@ -239,9 +241,11 @@ class MapFragment : Fragment() {
             point.coord,
             ImageProvider.fromBitmap(marker),
         )
-        mapObject.setText(point.name)
-        mapObject.setTextStyle(TextStyle().setPlacement(TextStyle.Placement.BOTTOM))
-        mapObject.addTapListener(mapObjectTapListener)
+        with(mapObject) {
+            setText(point.name)
+            setTextStyle(TextStyle().setPlacement(TextStyle.Placement.BOTTOM))
+            addTapListener(mapObjectTapListener)
+        }
     }
 
     private fun getCurrentUserLocation() {
